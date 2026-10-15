@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+	<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	<NuGetAudit>false</NuGetAudit>
+	<UserSecretsId>4893a0d8-1528-4750-91ac-42b085e95752</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<PackageReference Include="ERG_MES.Authorization" Version="1.0.16" />
+	<PackageReference Include="FluentResults" Version="4.0.0" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.5" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.5" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.5">
+	  <PrivateAssets>all</PrivateAssets>
+	  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	</PackageReference> 
+	<PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.5" />
+	<PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="10.1.5" />
+	<PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="10.0.0" />
+	<PackageReference Include="Serilog.Sinks.Elasticsearch" Version="10.0.0" />
+	<PackageReference Include="Serilog.AspNetCore" Version="10.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Infrastructure\Migrations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<ProjectReference Include="..\Shared\Contracts\Contracts.csproj" />
+	<ProjectReference Include="..\Shared\Providers\Providers.csproj" />
+  </ItemGroup>
+	  
+</Project>
